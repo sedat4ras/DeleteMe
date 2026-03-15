@@ -1,0 +1,10 @@
+{
+    "first_names": ["John"],
+    "last_names": ["Doe"],
+    "nicknames": ["johndoe99", "jdoe"],
+    "emails": ["johndoe99@example.com"],
+    "usernames": ["johndoe99"],
+    "birth_cities": ["Springfield"],
+    "schools": ["Springfield High"],
+    "keywords": ["photography", "linux"]
+}
