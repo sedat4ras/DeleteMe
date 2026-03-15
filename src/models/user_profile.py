@@ -54,7 +54,7 @@ class UserProfile(BaseModel):
     def all_values(self) -> list[str]:
         """Return a flat, deduplicated list of every data point in the profile."""
         values: list[str] = []
-        for field_name, field_info in self.model_fields.items():
+        for field_name in type(self).model_fields:
             raw = getattr(self, field_name)
             if isinstance(raw, list):
                 values.extend(raw)
@@ -66,7 +66,7 @@ class UserProfile(BaseModel):
     def populated_field_names(self) -> list[str]:
         """Return names of fields that have at least one value."""
         names: list[str] = []
-        for field_name in self.model_fields:
+        for field_name in type(self).model_fields:
             raw = getattr(self, field_name)
             if isinstance(raw, list) and raw:
                 names.append(field_name)
