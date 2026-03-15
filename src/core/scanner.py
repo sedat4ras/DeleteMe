@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import asyncio
 
+from src.core.exporter import Exporter
 from src.core.http_client import StealthClient
 from src.core.jsonl_logger import JsonlLogger
 from src.core.rate_limiter import RateLimiter
@@ -77,7 +78,13 @@ class Scanner:
             self.scan_state.is_complete = True
             await self.state_manager.update_session(self.scan_state)
             jsonl.log_event("scan_complete", {"total_results": len(self.results)})
+
+            # Export reports
+            exporter = Exporter(scan_id)
+            json_path = exporter.to_json(self.results)
+            csv_path = exporter.to_csv(self.results)
             log.info(f"[bold green]Scan complete.[/] Total results: {len(self.results)}")
+            log.info(f"Reports saved: {json_path} | {csv_path}")
 
             return self.results
 
