@@ -4,16 +4,16 @@ A modular OSINT (Open Source Intelligence) tool that maps a user's digital footp
 
 ## Features
 
-- **Dynamic User Profiling** — Accepts unlimited variations of personal data (names, emails, usernames, addresses, schools, workplaces, etc.) via Pydantic v2 models
-- **Cross-Correlation Engine** — Generates intelligent search permutations by combining profile fields (e.g. `first_name + school`, `nickname + city`, `email_prefix + last_name`)
-- **Google Dorking** — Automated dork query generation with `site:`, `inurl:`, and exact-match operators via DuckDuckGo
-- **Username Checker** — Probes 20+ platforms (GitHub, Reddit, Medium, TikTok, Steam, etc.) for username existence
-- **HIBP Integration** — Checks emails against Have I Been Pwned breach database and PwnedPasswords k-anonymity API
-- **Stealth & Rate Limiting** — Per-domain exponential backoff with jitter and User-Agent rotation to avoid IP bans
-- **Crash-Safe Persistence** — Dual storage: SQLite for structured queries + JSONL for append-only streaming backup
-- **Resume Capability** — Interrupted scans can be resumed from where they left off
-- **Report Export** — Auto-generates JSON and CSV reports after each scan
-- **Rich CLI** — Interactive terminal UI with colored output and result tables
+- **Dynamic User Profiling**: Accepts unlimited variations of personal data (names, emails, usernames, addresses, schools, workplaces, etc.) via Pydantic v2 models
+- **Cross-Correlation Engine**: Generates intelligent search permutations by combining profile fields (e.g. `first_name + school`, `nickname + city`, `email_prefix + last_name`)
+- **Google Dorking**: Automated dork query generation with `site:`, `inurl:`, and exact-match operators via DuckDuckGo
+- **Username Checker**: Probes 20+ platforms (GitHub, Reddit, Medium, TikTok, Steam, etc.) for username existence
+- **HIBP Integration**: Checks emails against Have I Been Pwned breach database and PwnedPasswords k-anonymity API
+- **Stealth & Rate Limiting**: Per-domain exponential backoff with jitter and User-Agent rotation to avoid IP bans
+- **Crash-Safe Persistence**: Dual storage: SQLite for structured queries + JSONL for append-only streaming backup
+- **Resume Capability**: Interrupted scans can be resumed from where they left off
+- **Report Export**: Auto-generates JSON and CSV reports after each scan
+- **Rich CLI**: Interactive terminal UI with colored output and result tables
 
 ## Project Structure
 
@@ -123,11 +123,11 @@ GitHub, GitLab, Reddit, Medium, Dev.to, Keybase, HackerNews, Replit, PyPI, npm, 
 ## Tech Stack
 
 - **Python 3.11+** with `asyncio`
-- **aiohttp** — Async HTTP requests
-- **aiosqlite** — Async SQLite persistence
-- **Pydantic v2** — Data validation and modeling
-- **Rich** — Terminal UI and formatting
-- **tenacity** — Retry logic
+- **aiohttp**: Async HTTP requests
+- **aiosqlite**: Async SQLite persistence
+- **Pydantic v2**: Data validation and modeling
+- **Rich**: Terminal UI and formatting
+- **tenacity**: Retry logic
 
 ## Disclaimer
 
